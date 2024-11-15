@@ -1,23 +1,25 @@
 package org.automation.apiTest.steps;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import io.cucumber.java.en.When;
+import org.automation.apiTest.utils.enums.HttpMethod;
+import org.testng.Assert;
 
-import static org.automation.apiTest.context.ApiContext.getRequestBody;
-import static org.automation.apiTest.context.ApiContext.setResponse;
-import static org.automation.apiTest.utils.HeaderUtil.getDefaultHeaders;
+import static org.automation.apiTest.context.ApiContext.getResponse;
+import static org.automation.apiTest.steps.APIHandlers.sendRequest;
+import static org.automation.apiTest.utils.LoggerUtil.logInfo;
 
 public class CommonAPISteps {
 
-    public void sendRequest(String endpoint, String method) {
-        String body = getRequestBody();
-        Response response = switch (method.toUpperCase()) {
-            case "GET" -> RestAssured.given().headers(getDefaultHeaders()).body(body).get(endpoint);
-            case "POST" -> RestAssured.given().headers(getDefaultHeaders()).body(body).post(endpoint);
-            case "DELETE" -> RestAssured.given().headers(getDefaultHeaders()).body(body).delete(endpoint);
-            case "PATCH" -> RestAssured.given().headers(getDefaultHeaders()).body(body).patch(endpoint);
-            default -> throw new IllegalArgumentException("Unsupported HTTP method: " + method);
-        };
-        setResponse(response);
+    @When("User sent {httpMethod} request to {string} with domain of {string}")
+    public void sentRequestToWithDomain(HttpMethod method, String request, String domain) {
+        sendRequest(request, domain, method);
+    }
+
+    @When("Assert status code is {word}")
+    public void assertStatusCode(String status) {
+        int actualStatusCode = getResponse().getStatusCode();
+        int expectedStatusCode = Integer.parseInt(status);
+        Assert.assertEquals(actualStatusCode, expectedStatusCode, String.format
+                ("\nResponse: %s \nStatus code is incorrect expected: [%s], actual:[%s]\n", getResponse().getBody().prettyPrint(), expectedStatusCode, actualStatusCode));
     }
 }
