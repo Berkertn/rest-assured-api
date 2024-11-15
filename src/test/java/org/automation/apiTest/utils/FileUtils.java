@@ -20,10 +20,14 @@ public class FileUtils {
     private static final Map<String, String> baseUrls;
 
     static {
+        //TODO add environment info in here to get changed env urls
         Yaml yaml = new Yaml();
         Map<String, Map<String, String>> config;
-        try (InputStream in = FileUtils.class.getClassLoader().getResourceAsStream("config.yml")) {
-            config = yaml.load(in);
+        try (InputStream file = FileUtils.class.getClassLoader().getResourceAsStream("testUrls.yml")) {
+            if (file == null) {
+                throw new IllegalArgumentException("testUrls.yml not found in resources folder");
+            }
+            config = yaml.load(file);
             baseUrls = config.getOrDefault("baseUrls", Collections.emptyMap());
         } catch (Exception e) {
             logException(e);
@@ -42,8 +46,6 @@ public class FileUtils {
     }
 
     public static JsonNode getJsonFromFile(String typeOfJson, String filePath) {
-        //typeOfJson is like request, response, schema
-
         try (InputStream inputStream = FileUtils.class
                 .getClassLoader()
                 .getResourceAsStream(String.format("%s/%s", typeOfJson, filePath))) {
@@ -57,6 +59,5 @@ public class FileUtils {
             logException(e);
             return null;
         }
-
     }
 }

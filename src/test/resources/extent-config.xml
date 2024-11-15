@@ -1,11 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extentreports>
     <configuration>
-        <theme>standard</theme>
+        <!-- Report Theme: 'standard' or 'dark' -->
+        <theme>dark</theme>
+
+        <!-- Encoding Format -->
         <encoding>utf-8</encoding>
+
+        <!-- Protocol for Embedded Resources -->
         <protocol>HTTPS</protocol>
+
+        <!-- Title for the Generated Report -->
         <documentTitle>API Test Automation Report</documentTitle>
+
+        <!-- Name Displayed on the Report -->
         <reportName>API Test Report</reportName>
+
+        <!-- Timestamp Format -->
         <timeStampFormat>yyyy-MM-dd HH:mm:ss</timeStampFormat>
+
+        <!-- Offline Mode for Resources -->
+        <offlineMode>true</offlineMode>
+
+        <!-- Charts Configuration -->
+        <chartsConfiguration>
+            <!-- Enable Charts -->
+            <enable>true</enable>
+            <!-- Pie Chart for Test Status -->
+            <testStatusVisibility>true</testStatusVisibility>
+        </chartsConfiguration>
+
+        <!-- Log View Order: 'asc' or 'desc' -->
+        <logViewOrder>asc</logViewOrder>
+
+        <!-- Custom CSS -->
+        <styles>
+            body {
+            font-family: Arial, sans-serif;
+            }
+            .node-name {
+            color: #4CAF50;
+            }
+        </styles>
+
+        <!-- Custom JavaScript -->
+        <scripts>
+            console.log("Custom JavaScript Loaded for Extent Report.");
+        </scripts>
+
+        <!-- Screenshot Strategy -->
+        <screenshotStrategy>failed</screenshotStrategy> <!-- Options: 'all', 'failed', 'none' -->
+
+        <!-- Exception Formatter -->
+        <exceptionFormatter>
+            <enable>true</enable>
+        </exceptionFormatter>
+
+        <!-- Enable Step View -->
+        <stepView>true</stepView>
+
+        <!-- Enable CI/CD Timeline View -->
+        <enableTimeline>true</enableTimeline>
+
+        <!-- Author and Category Settings -->
+        <enableAuthorView>true</enableAuthorView>
+        <enableCategoryView>true</enableCategoryView>
+
+        <!-- Report Tags -->
+        <tags>
+            <tag>API</tag>
+            <tag>Automation</tag>
+        </tags>
     </configuration>
 </extentreports>

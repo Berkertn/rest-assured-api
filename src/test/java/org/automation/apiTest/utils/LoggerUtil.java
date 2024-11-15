@@ -5,29 +5,21 @@ import org.apache.logging.log4j.Logger;
 
 public class LoggerUtil {
 
-    private static final ThreadLocal<Logger> threadLocalLogger = ThreadLocal.withInitial(() -> LogManager.getLogger(LoggerUtil.class));
-
-    public static Logger getLog() {
-        return threadLocalLogger.get();
-    }
-
-    public static void removeLog() {
-        threadLocalLogger.remove();
-    }
+    private static final Logger logger = LogManager.getLogger(LoggerUtil.class);
 
     public static void logInfo(String message) {
-        threadLocalLogger.get().info(message);
+        logger.info(message);
     }
 
     public static void logWarn(String message) {
-        threadLocalLogger.get().warn(message);
+        logger.warn(message);
     }
 
     public static void logError(String message) {
-        threadLocalLogger.get().error(message);
+        logger.error(message);
     }
 
-    public static void logException(Exception message) {
-        threadLocalLogger.get().error(message);
+    public static void logException(Exception e) {
+        logger.error("Exception: ", e);
     }
 }

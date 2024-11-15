@@ -6,9 +6,12 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = "features",
-        glue = "org.automation.apiTest.stepdefinitions",
-        plugin = {"pretty", "json:target/cucumber-report.json"},
-        tags = "@api"
+        glue = {"org.automation.apiTest.steps", "org.automation.apiTest.utils", "org.automation.apiTest.configurations"},
+        plugin = {
+                "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  // Extent Reports Plugin
+        },
+        tags = "@api and not @Ignore"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
     @Override
