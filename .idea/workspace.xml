@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="hooks, TL variables, runner and utils added">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="framework completed for;&#10;- common api steps added&#10;- logger added">
+      <change beforePath="$PROJECT_DIR$/features/testExample.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/testExample.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/utils/LoggerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/utils/LoggerUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testUrls.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/extent-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731479712705</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="framework completed for;&#10;- common api steps added&#10;- logger added">
+      <option name="closed" value="true" />
+      <created>1731630211898</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731630211898</updated>
+    </task>
+    <task id="LOCAL-00005" summary="framework completed for;&#10;- common api steps added&#10;- logger added">
+      <option name="closed" value="true" />
+      <created>1731630224390</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731630224390</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,20 +146,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ignore updated" />
     <MESSAGE value="hooks, TL variables, runner and utils added" />
-    <option name="LAST_COMMIT_MESSAGE" value="hooks, TL variables, runner and utils added" />
+    <MESSAGE value="framework completed" />
+    <MESSAGE value="framework completed for;&#10;- common api steps added&#10;- logger added" />
+    <option name="LAST_COMMIT_MESSAGE" value="framework completed for;&#10;- common api steps added&#10;- logger added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

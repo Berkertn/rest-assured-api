@@ -4,11 +4,18 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.automation.apiTest.utils.enums.HttpMethod;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+import org.everit.json.schema.Schema;
+import org.everit.json.schema.loader.SchemaLoader;
+
+import java.io.InputStream;
 
 import static org.automation.apiTest.context.ApiContext.getRequestBody;
 import static org.automation.apiTest.context.ApiContext.setResponse;
 import static org.automation.apiTest.utils.FileUtils.getBaseUrlFromYaml;
 import static org.automation.apiTest.utils.HeaderUtil.getDefaultHeaders;
+import static org.automation.apiTest.utils.LoggerUtil.*;
 
 public class APIHandlers {
 
@@ -33,5 +40,21 @@ public class APIHandlers {
             requestSpecification.body(body);
         }
         return requestSpecification;
+    }
+
+    public static void validateResponseSchema(String responseBody, String schemaPathAndFileName) {
+        try (InputStream inputStream = APIHandlers.class.getClassLoader().getResourceAsStream("schemas/" + schemaPathAndFileName)) {
+            if (inputStream == null) {
+                throw new IllegalArgumentException("Schema file not found: " + schemaPathAndFileName);
+            }
+
+            JSONObject jsonSchema = new JSONObject(new JSONTokener(inputStream));
+            JSONObject jsonResponse = new JSONObject(responseBody);
+
+            Schema schema = SchemaLoader.load(jsonSchema);
+            schema.validate(jsonResponse); // Validate the response against the schema
+        } catch (Exception e) {
+            logError("Schema validation failed: " + e.getMessage());
+        }
     }
 }

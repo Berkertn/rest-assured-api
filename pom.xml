@@ -19,6 +19,8 @@
         <cucumber.version>7.14.0</cucumber.version>
         <json.schema.version>1.14.4</json.schema.version>
         <assertj.version>3.24.2</assertj.version>
+        <extent.report.version>5.0.9</extent.report.version>
+        <cucumber7-adapter.version>1.13.0</cucumber7-adapter.version>
     </properties>
 
     <dependencies>
@@ -78,14 +80,14 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.9</version>
+            <version>${extent.report.version}</version>
         </dependency>
 
         <!-- Extent Reports -->
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.13.0</version>
+            <version>${cucumber7-adapter.version}</version>
         </dependency>
 
         <!-- SLF4J API -->
@@ -134,7 +136,7 @@
                 <version>3.0.0-M9</version> <!-- Latest stable release -->
                 <configuration>
                     <parallel>methods</parallel> <!-- Enable parallel test execution -->
-                    <threadCount>4</threadCount> <!-- Define number of threads for parallel execution -->
+                    <threadCount>1</threadCount> <!-- Define number of threads for parallel execution -->
                     <includes>
                         <include>**/TestRunner.java</include> <!-- Your TestNG runner class -->
                     </includes>
