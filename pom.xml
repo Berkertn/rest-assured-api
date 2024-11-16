@@ -21,6 +21,7 @@
         <assertj.version>3.24.2</assertj.version>
         <extent.report.version>5.0.9</extent.report.version>
         <cucumber7-adapter.version>1.13.0</cucumber7-adapter.version>
+        <parallel.mode>false</parallel.mode>
     </properties>
 
     <dependencies>
@@ -125,6 +126,14 @@
             <version>2.2</version>
         </dependency>
 
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -135,11 +144,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M9</version> <!-- Latest stable release -->
                 <configuration>
-                    <parallel>methods</parallel> <!-- Enable parallel test execution -->
-                    <threadCount>1</threadCount> <!-- Define number of threads for parallel execution -->
-                    <includes>
-                        <include>**/TestRunner.java</include> <!-- Your TestNG runner class -->
-                    </includes>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <suiteXmlFiles>
+                        ${parallel.mode ? "src/test/resources/testng-parallel.xml" : "src/test/resources/testng-single.xml"}
+                    </suiteXmlFiles>
                     <testFailureIgnore>true</testFailureIgnore> <!-- Continue running even after failures -->
                 </configuration>
             </plugin>

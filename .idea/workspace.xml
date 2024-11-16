@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="framework completed for;&#10;- common api steps added&#10;- logger added">
-      <change beforePath="$PROJECT_DIR$/features/testExample.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/testExample.feature" afterDir="false" />
+    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="gitignore updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/APIHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +49,69 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.Single Thread Run.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml.executor": "Debug",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml.executor": "Run",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml.executor": "Run",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ertanb/Desktop/BERK/AutomationFrameworkForBE/ApiAutomation",
+    "last_opened_file_path": "/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml">
+    <configuration name="Single Thread Run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+                <option value="clean" />
+                <option value="test" />
+                <option value="-Dparallel.mode=false" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="api-test-automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="api-test-automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
@@ -71,8 +122,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="api-test-automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Single Thread Run" />
+      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
+      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
+      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
+        <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
         <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
       </list>
     </recent_temporary>
@@ -126,7 +195,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731630224390</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Schema validator added">
+      <option name="closed" value="true" />
+      <created>1731796896663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731796896663</updated>
+    </task>
+    <task id="LOCAL-00007" summary="gitignore updated">
+      <option name="closed" value="true" />
+      <created>1731796938964</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731796938964</updated>
+    </task>
+    <task id="LOCAL-00008" summary="gitignore updated">
+      <option name="closed" value="true" />
+      <created>1731796956053</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731796956053</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +241,9 @@
     <MESSAGE value="hooks, TL variables, runner and utils added" />
     <MESSAGE value="framework completed" />
     <MESSAGE value="framework completed for;&#10;- common api steps added&#10;- logger added" />
-    <option name="LAST_COMMIT_MESSAGE" value="framework completed for;&#10;- common api steps added&#10;- logger added" />
+    <MESSAGE value="Schema validator added" />
+    <MESSAGE value="gitignore updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

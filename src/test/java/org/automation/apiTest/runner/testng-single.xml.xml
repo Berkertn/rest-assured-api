@@ -1,0 +1,7 @@
+<suite name="API Test Suite" verbose="1" parallel="none" thread-count="1">
+    <test name="API Tests">
+        <classes>
+            <class name="org.automation.apiTest.runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>

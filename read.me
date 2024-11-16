@@ -1,1 +1,13 @@
 mvn test -Denv=staging
+# Single
+mvn clean test -Dparallel.mode=false
+#Parellel
+mvn clean test -Dparallel.mode=true
+
+
+--- TODO
+# Parallel
+mvn clean test -DsuiteXmlFile=src/test/resources/testng-parallel.xml
+
+# Single Thread Test
+mvn clean test -DsuiteXmlFile=src/test/resources/testng-single.xml
