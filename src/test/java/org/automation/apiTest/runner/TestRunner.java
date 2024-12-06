@@ -37,4 +37,19 @@ public class TestRunner extends AbstractTestNGCucumberTests {
             logInfo("Running tests in single-thread mode.");
         }
     }
+
+    static {
+        // Default tags
+        String defaultTags = "@api and not @Ignore";
+
+        // Override if `cucumber.filter.tags` system property is provided
+        String dynamicTags = System.getProperty("cucumber.filter.tags");
+        if (dynamicTags != null && !dynamicTags.isEmpty()) {
+            logInfo("Overriding default tags with: " + dynamicTags);
+            System.setProperty("cucumber.filter.tags", dynamicTags);
+        } else {
+            logInfo("Using default tags: " + defaultTags);
+            System.setProperty("cucumber.filter.tags", defaultTags);
+        }
+    }
 }

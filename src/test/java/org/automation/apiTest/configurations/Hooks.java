@@ -26,7 +26,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             logInfo("Scenario failed: " + scenario.getName());
             logInfo(String.format("Request body: [%s]\n", getRequestBody()));
-            logInfo(String.format("Response: [%s] \n", getResponse().getBody().toString()));
+            logInfo(String.format("Response: [%s] \n", getResponse().getBody().prettyPrint()));
         } else {
             logInfo(String.format("Scenario passed: %s\n", scenario.getName()));
         }

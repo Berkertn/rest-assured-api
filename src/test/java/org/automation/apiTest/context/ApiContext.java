@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import static org.automation.apiTest.utils.FileUtils.getBaseUrlFromYaml;
+import static org.automation.apiTest.utils.LoggerUtil.logInfo;
 
 public class ApiContext {
 
@@ -56,6 +57,7 @@ public class ApiContext {
 
     public static void setEnv(String envInfo) {
         env.set(envInfo);
+        logInfo(String.format("Env set as: [%s]", envInfo));
     }
 
     public static String getEnv() {
@@ -64,6 +66,7 @@ public class ApiContext {
 
     public static void setBaseUrl(String key) {
         String url = getBaseUrlFromYaml(key + getEnv());
+        logInfo(String.format("BaseUrl: [%s]", url));
         baseUrl.set(url);
     }
 

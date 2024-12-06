@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="gitignore updated">
+    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="parallel and single thread run enabled (xml selection now is TODO)">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/testExample.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/testExample.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/automation/apiTest/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/context/ApiContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/context/ApiContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/extent.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +54,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Maven.Single Thread Run.executor": "Run",
+    "Maven.Parallel Thread Run.executor": "Debug",
+    "Maven.Single Thread Run.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml.executor": "Run",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml.executor": "Debug",
     "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml.executor": "Run",
-    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml.executor": "Run",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner",
@@ -69,6 +75,38 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml">
+    <configuration name="Parallel Thread Run" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+                <option value="-Dparallel.mode=true" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Single Thread Run" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -81,7 +119,6 @@
             </option>
             <option name="goals">
               <list>
-                <option value="mvn" />
                 <option value="clean" />
                 <option value="test" />
                 <option value="-Dparallel.mode=false" />
@@ -102,26 +139,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api-test-automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="api-test-automation" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="api-test-automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
@@ -134,15 +151,12 @@
     </configuration>
     <list>
       <item itemvalue="Maven.Single Thread Run" />
+      <item itemvalue="Maven.Parallel Thread Run" />
       <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
-      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
-      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
-        <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml" />
-        <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731796956053</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="parallel and single thread run enabled (xml selection now is TODO)">
+      <option name="closed" value="true" />
+      <created>1731799071072</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731799071072</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,22 +265,7 @@
     <MESSAGE value="framework completed for;&#10;- common api steps added&#10;- logger added" />
     <MESSAGE value="Schema validator added" />
     <MESSAGE value="gitignore updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore updated" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="parallel and single thread run enabled (xml selection now is TODO)" />
+    <option name="LAST_COMMIT_MESSAGE" value="parallel and single thread run enabled (xml selection now is TODO)" />
   </component>
 </project>
