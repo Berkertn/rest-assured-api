@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="parallel and single thread run enabled (xml selection now is TODO)">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
+    <list default="true" id="b65a02d8-65e2-44b2-849c-2a7f048b2196" name="Changes" comment="- request body now set via json&#10;- pipeline implementation start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/testExample.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/testExample.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/read.me" beforeDir="false" afterPath="$PROJECT_DIR$/read.me" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/automation/apiTest/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/configurations/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/context/ApiContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/context/ApiContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/TestRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/extent.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/extent.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/schemas/users/usersSuccessResponseSchema.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/schemas/users/users_success_response_schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,15 +48,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Maven.Parallel Thread Run.executor": "Debug",
+    "Maven.Parallel Thread Run.executor": "Run",
     "Maven.Single Thread Run.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/SingleThreadTestRunner.xml.executor": "Debug",
     "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/TestRunner.xml.executor": "Run",
-    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml.executor": "Debug",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml.executor": "Run",
+    "TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-single.xml.xml.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner",
+    "last_opened_file_path": "/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/resources/schemas/users",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -71,7 +66,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/schemas/users" />
       <recent name="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/schemas/" />
+      <recent name="$PROJECT_DIR$/src/test/resources/schemas/users/auth" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml">
@@ -149,14 +149,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-single.xml.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="api-test-automation" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/org/automation/apiTest/runner/testng-single.xml.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Maven.Single Thread Run" />
       <item itemvalue="Maven.Parallel Thread Run" />
+      <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-single.xml.xml" />
       <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-parallel.xml.xml" />
+        <item itemvalue="TestNG./Users/berkertan/Desktop/PROJECTS/apiTest/api-test-automation/src/test/java/org/automation/apiTest/runner/testng-single.xml.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731799071072</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- request body now set via json&#10;- pipeline implementation start">
+      <option name="closed" value="true" />
+      <created>1733529521176</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733529521176</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +286,63 @@
     <MESSAGE value="Schema validator added" />
     <MESSAGE value="gitignore updated" />
     <MESSAGE value="parallel and single thread run enabled (xml selection now is TODO)" />
-    <option name="LAST_COMMIT_MESSAGE" value="parallel and single thread run enabled (xml selection now is TODO)" />
+    <MESSAGE value="- request body now set via json&#10;- pipeline implementation start" />
+    <option name="LAST_COMMIT_MESSAGE" value="- request body now set via json&#10;- pipeline implementation start" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/automation/apiTest/steps/CommonAPISteps.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
